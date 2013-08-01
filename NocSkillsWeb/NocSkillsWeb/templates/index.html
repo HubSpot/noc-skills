@@ -1,0 +1,29 @@
+<DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <meta charset="utf-8">
+    <title>HubSpot NOC Skills Test</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HubSpot NOC Skills Test">
+    <meta name="author" content="Ian Marlier <imarlier@hubspot.com>">
+  </head>
+  <body>
+    <h1>A short list of reasons to work at HubSpot</h1>
+    <p>
+      <table>
+        {% for reason in reasons %}
+        <tr>
+          <td width="15%"><strong>{{ reason.name }}</strong></td>
+          <td width="50%">{{ reason.reason }}</td>
+          <td width="35%">
+            {% if reason.imageURL %}
+            <img src="{{ reason.imageURL }}" />
+            {% else %}
+            &nbsp;
+            {% endif %}
+          </td>
+        </tr>
+        {% endfor %}
+      </table>
+  </body>
+</html>
