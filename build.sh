@@ -45,6 +45,10 @@ else
     exit 1
 fi
 
+# Create the Mongo source archive
+echo "Creating NocSkillsMongo tarball"
+tar -zcvf ${rpmbuilddir}/SOURCES/noc-skills-mongo-${version}.tar.gz NocSkillsMongo/*
+
 # Run the NocSkillsMongo build
 echo "Running the NocSkillsMongo build"
 rpmbuild -ba --define "_topdir ${rpmbuilddir}" --define "version ${version}" noc-skills-mongo.spec
