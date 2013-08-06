@@ -2,3 +2,5 @@
 NocSkillsAPI/target/*
 NocSkillsAPI/.settings/org.eclipse.m2e.core.prefs
 NocSkillsAPI/.settings/org.eclipse.jdt.core.prefs
+NocSkillsWeb/logs/*
+RPMs/*
