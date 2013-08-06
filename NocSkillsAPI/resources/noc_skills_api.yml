@@ -1,0 +1,6 @@
+
+mongoPort: 27017
+mongoDBName: "nocskills"
+http:
+  port: 24080
+  adminPort: 24081
