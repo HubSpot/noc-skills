@@ -25,8 +25,8 @@ This is not a test of what you already know how to do, it's a test of your abili
 2. If you do not have an Amazon Web Services account, you can create one on [the Amazon website](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html).  Note that this skills test can be completed using Amazon's [Free Usage Tier](http://aws.amazon.com/free/).
 3. Launch an instance of the EC2 AMI xxxxxxxxx in Amazon's US-East region.  You will need to launch this instance with a security group that allows access from any IP address on port 8000.  You should launch this instance as a Micro Instance (t1.micro).  This will allow you to take advantage of the Free Usage Tier.
 4. The expected state of the instance once it has completed launching is:
-    * There will be a python django application that is listening for connections on port 8000.
-    * There will be a Java application that is listening for connections on port 24080.
+    * There will be a python django application that is listening for connections on port 8000.  This application resides in /usr/share/hubspot/NocSkillsWeb, and has a startup script at /etc/init.d/NocSkillsWeb.
+    * There will be a Java application that is listening for connections on port 24080.  This application has a
     * There will be an instance of MongoDB that is listening for connections on port 27017.
     * A connection to http://<instance public ip>:8000/list will return a list of items.
 5. Verify that all applications are running, and are listening on the appropriate ports.  If any of them are not, please start them up.

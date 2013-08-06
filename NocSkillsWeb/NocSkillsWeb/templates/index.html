@@ -1,29 +1,38 @@
-<DOCTYPE html>
+{% autoescape off %}
 <html lang="en" xmlns="http://www.w3.org/1999/html">
   <head>
     <meta charset="utf-8">
     <title>HubSpot NOC Skills Test</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HubSpot NOC Skills Test">
-    <meta name="author" content="Ian Marlier <imarlier@hubspot.com>">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="HubSpot NOC Skills Test" />
+    <meta name="author" content="Ian Marlier <imarlier@hubspot.com>" />
+    <link rel="stylesheet" href="/s/NocSkillsWeb.css" type="text/css" />
   </head>
   <body>
-    <h1>A short list of reasons to work at HubSpot</h1>
+    <h1>A short list of reasons to work at <span class="hubspot">HubSpot</span></h1>
     <p>
-      <table>
+      <div id="reasons">
+        <table>
         {% for reason in reasons %}
-        <tr>
-          <td width="15%"><strong>{{ reason.name }}</strong></td>
-          <td width="50%">{{ reason.reason }}</td>
-          <td width="35%">
-            {% if reason.imageURL %}
-            <img src="{{ reason.imageURL }}" />
-            {% else %}
-            &nbsp;
-            {% endif %}
-          </td>
-        </tr>
+          <tr>
+            <td width="25%"><strong>{{ reason.name }}</strong></td>
+            <td width="75%">{{ reason.reason }}</td>
+          </tr>
         {% endfor %}
-      </table>
+        </table>
+      </div>
+      <div id="images">
+        <img src="http://dev.hubspot.com/hs-fs/hub/51294/file-207939024-jpg/rooftopblog.jpg" />
+        <p />
+
+      </div>
+    </p>
+    <div id="video-left" class="middle video-left">
+      <iframe name="wistia_embed" src="http://fast.wistia.net/embed/iframe/gq5ftayqb8?controlsVisibleOnLoad=true&amp;playerColor=6e5e55&amp;plugin%5BpostRoll-v1%5D%5Braw%5D=%3Cdiv%20style%3D%22text-align%3A%20center%3B%22%3E%3Ca%20href%3D%22http%3A%2F%2Fdev.hubspot.com%2Fjobs%22%20style%3D%22color%3A%20rgb%28255%2C%20255%2C%20255%29%3B%20text-decoration%3A%20none%3B%22%20target%3D%22_blank%22%3EClick%20here%20to%20view%3Cbr%3Eopen%20jobs%20with%20HubSpot%20Dev%3C%2Fa%3E%3C%2Fdiv%3E&amp;plugin%5BpostRoll-v1%5D%5Bstyle%5D%5BbackgroundColor%5D=%23616161&amp;plugin%5BpostRoll-v1%5D%5Bstyle%5D%5Bcolor%5D=%23ffffff&amp;plugin%5BpostRoll-v1%5D%5Bstyle%5D%5BfontFamily%5D=Gill%20Sans%2C%20Helvetica%2C%20Arial%2C%20sans-serif&amp;plugin%5BpostRoll-v1%5D%5Bstyle%5D%5BfontSize%5D=36px&amp;plugin%5BpostRoll-v1%5D%5Bstyle%5D%5BtextAlign%5D=left&amp;version=v1&amp;videoHeight=312&amp;videoWidth=555&amp;volumeControl=true" frameborder="0" height="312" scrolling="no" width="555"></iframe>
+    </div>
+    <div id="video-right" class="middle video-right">
+      <iframe name="wistia_embed" src="http://fast.wistia.net/embed/iframe/1cpv46tqh5?controlsVisibleOnLoad=true&amp;playerColor=e66815&amp;plugin%5BpostRoll-v1%5D=%7B%22raw%22%3A%22%3Cdiv%20style%3D%5C%22text-align%3Acenter%3B%5C%22%3E%3Ca%20href%3D%5C%22http%3A%2F%2Fwww.hubspot.com%2Fjobs%2F%5C%22%20style%3D%5C%22color%3A%23ffffff%3Btext-decoration%3Anone%3B%5C%22%20target%3D%5C%22_blank%5C%22%3ELearn%20more%20about%20working%3Cbr%3E%20at%20HubSpot%3C%2Fa%3E%3C%2Fdiv%3E%22%2C%22style%22%3A%7B%22backgroundColor%22%3A%22%23616161%22%2C%22color%22%3A%22%23ffffff%22%2C%22fontSize%22%3A%2236px%22%2C%22fontFamily%22%3A%22Gill%20Sans%2C%20Helvetica%2C%20Arial%2C%20sans-serif%22%2C%22textAlign%22%3A%22left%22%7D%7D&amp;version=v1&amp;videoHeight=312&amp;videoWidth=555&amp;volumeControl=true" frameborder="0" scrolling="no" width="555" height="312"></iframe>
+    </div>
   </body>
 </html>
+{% endautoescape %}

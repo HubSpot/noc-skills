@@ -14,7 +14,7 @@ ADMINS = (
 MANAGERS = ADMINS
 
 NOC_SKILLS_API_HOST = 'localhost'
-NOC_SKILLS_API_PORT = 8000
+NOC_SKILLS_API_PORT = 24080
 
 
 DATABASES = {
@@ -80,7 +80,7 @@ STATICFILES_DIRS = (
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(SETTINGS_PATH, 'static')
+    [os.path.join(SETTINGS_PATH, 'static')]
 )
 
 # List of finder classes that know how to find static files in

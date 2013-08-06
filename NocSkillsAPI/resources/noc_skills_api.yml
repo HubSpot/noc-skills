@@ -1,4 +1,4 @@
-
+mongoHost: "localhost"
 mongoPort: 27017
 mongoDBName: "nocskills"
 http:
