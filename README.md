@@ -24,7 +24,7 @@ This is not a test of what you already know how to do, it's a test of your abili
 1. Create a fork of this GitHub Repository into your own GitHub account
 2. If you do not have an Amazon Web Services account, create one on [the Amazon website](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html).  Note that this skills test can be completed using Amazon's [Free Usage Tier](http://aws.amazon.com/free/).
 3. Launch an instance of the EC2 AMI ami-827730eb in Amazon's US-East region.  This instance is named "HubSpot NOC Engineering Skills Test".  You should be sure that the following things are true of the instance:
-    - You will need to launch this instance with a security group that allows access from any IP address (0.0.0.0/0) on port 8000.
+    - You will need to launch this instance with a security group that allows access from any IP address (0.0.0.0/0) on port 8000.  It should also allow connections from any IP address on port 22.
     - You should launch this instance as a Micro Instance (t1.micro).  This will allow you to take advantage of the Free Usage Tier.
 4. The **expected** state of the instance once it has completed launching is:
     - There will be a python django application that is listening for connections on port 8000.  This application resides in /usr/share/hubspot/NocSkillsWeb, and has a startup script at /etc/init.d/NocSkillsWeb.
