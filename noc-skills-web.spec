@@ -13,7 +13,7 @@ Source0:   %{name}-%{version}.tar.gz
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-build
 URL:       https://github.com/HubSpot/noc-skills
 BuildArch: noarch
-Requires:    Django14, python-gunicorn, python-setuptools
+Requires:    Django14, python-gunicorn, python-setuptools, python-requests
 
 %description
 A simple test of skills recommended or necessary for a successful

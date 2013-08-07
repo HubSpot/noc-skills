@@ -55,6 +55,7 @@ rpmbuild -ba --define "_topdir ${rpmbuilddir}" --define "version ${version}" noc
 
 if [ $? -eq 0 ]; then
     echo "Copying mongo-skills-mongo RPM to dist directory"
+    cp ${rpmbuilddir}/RPMS/noarch/noc-skills-mongo-10gen-repo-${version}-1.noarch.rpm ./RPMs/
     cp ${rpmbuilddir}/RPMS/noarch/noc-skills-mongo-${version}-1.noarch.rpm ./RPMs/
 else
     echo "[FAILURE] noc-skills-mongo RPM build failed"

@@ -22,18 +22,19 @@ This is not a test of what you already know how to do, it's a test of your abili
 
 ### Instructions
 1. Create a fork of this GitHub Repository into your own GitHub account
-2. If you do not have an Amazon Web Services account, you can create one on [the Amazon website](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html).  Note that this skills test can be completed using Amazon's [Free Usage Tier](http://aws.amazon.com/free/).
-3. Launch an instance of the EC2 AMI xxxxxxxxx in Amazon's US-East region.  You will need to launch this instance with a security group that allows access from any IP address on port 8000.  You should launch this instance as a Micro Instance (t1.micro).  This will allow you to take advantage of the Free Usage Tier.
-4. The expected state of the instance once it has completed launching is:
-    * There will be a python django application that is listening for connections on port 8000.  This application resides in /usr/share/hubspot/NocSkillsWeb, and has a startup script at /etc/init.d/NocSkillsWeb.
-    * There will be a Java application that is listening for connections on port 24080.  This application has a
-    * There will be an instance of MongoDB that is listening for connections on port 27017.
-    * A connection to http://<instance public ip>:8000/list will return a list of items.
-5. Verify that all applications are running, and are listening on the appropriate ports.  If any of them are not, please start them up.
+2. If you do not have an Amazon Web Services account, create one on [the Amazon website](https://portal.aws.amazon.com/gp/aws/developer/registration/index.html).  Note that this skills test can be completed using Amazon's [Free Usage Tier](http://aws.amazon.com/free/).
+3. Launch an instance of the EC2 AMI ami-6e682f07 in Amazon's US-East region.  This instance is named "HubSpot NOC Engineering Skills Test".  You should be sure that the following things are true of the instance:
+    - You will need to launch this instance with a security group that allows access from any IP address (0.0.0.0/0) on port 8000.
+    - You should launch this instance as a Micro Instance (t1.micro).  This will allow you to take advantage of the Free Usage Tier.
+4. The **expected** state of the instance once it has completed launching is:
+    - There will be a python django application that is listening for connections on port 8000.  This application resides in /usr/share/hubspot/NocSkillsWeb, and has a startup script at /etc/init.d/NocSkillsWeb.
+    - There will be a Java application that is listening for connections on port 24080.  This application resides in /usr/share/hubspot/NocSkillsAPI, and has a startup script at /etc/init.d/NocSkillsAPI.
+    - There will be an instance of MongoDB that is listening for connections on port 27017.
+    - A connection to http://<instance public ip>:8000/ will return a webpage.
+5. Verify that all applications are running, and are listening on the appropriate ports.  If any of them are not:
+    - Create a GitHub issue __in your own fork of this repository__ that describes the issue.  Your description should be detailed enough that someone else reading the issue could immediately tell what you had found, without needing to do their own investigation.
+    - Fix the application on the machine.
+    - Ensure that the application is configured to start up if the machine reboots
+    - Fix the problem in your fork of this GitHub repository
+    - Create a Pull Request with your proposed fix
 6. Once all applications are running, verify that the applications are working as expected.
-7. If any applications are not working as expected, create a GitHub issue _on your own fork of this repository_ that documents what the problem is.
-
-### Bonus Points
-If possible, please also attempt to fix any problems that you have found.  All of the application code is located in this repository.  You should do the following:
-1. Create a fix for the problem(s) that you have found.
-2. Submit a pull request with the fix.
