@@ -31,7 +31,7 @@ This is not a test of what you already know how to do, it's a test of your abili
     - There will be a python django application that is listening for connections on port 8000.  This application resides in /usr/share/hubspot/NocSkillsWeb, and has a startup script at /etc/init.d/NocSkillsWeb.
     - There will be a Java application that is listening for connections on port 24080.  This application resides in /usr/share/hubspot/NocSkillsAPI, and has a startup script at /etc/init.d/NocSkillsAPI.
     - There will be an instance of MongoDB that is listening for connections on port 27017.
-    - A connection to http://<instance public ip>:8000/ will return a webpage.
+    - A connection to http://\<instance public ip\>:8000/ will return a webpage.
 5. Verify that all applications are running, and are listening on the appropriate ports.  If any of them are not:
     - Create a GitHub issue __in your own fork of this repository__ that describes the issue.  Your description should be detailed enough that someone else reading the issue could immediately tell what you had found, without needing to do their own investigation.
     - Fix the application on the machine.
