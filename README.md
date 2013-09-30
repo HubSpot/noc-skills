@@ -13,6 +13,7 @@ This is a position that is designed with the idea that you'll grow out of it, an
 Skills Evaluation
 =================
 This skills evaluation is designed to give us a sense of a couple of things:
+
 1. Your familiarity and comfort with Amazon Web Services (which we use extensively), with Git, and with the Linux command line
 2. Your understanding of how different layers of a web service interact
 3. Your ability to diagnose problems with code with which you are unfamiliar
@@ -27,10 +28,10 @@ This is not a test of what you already know how to do, it's a test of your abili
     - You will need to launch this instance with a security group that allows access from any IP address (0.0.0.0/0) on port 8000.  It should also allow connections from any IP address on port 22.
     - You should launch this instance as a Micro Instance (t1.micro).  This will allow you to take advantage of the Free Usage Tier.
 4. The **expected** state of the instance once it has completed launching is:
-    - There will be a python django application that is listening for connections on port 8000.  This application resides in /usr/share/hubspot/NocSkillsWeb, and has a startup script at /etc/init.d/NocSkillsWeb.
-    - There will be a Java application that is listening for connections on port 24080.  This application resides in /usr/share/hubspot/NocSkillsAPI, and has a startup script at /etc/init.d/NocSkillsAPI.
+    - There will be a python django application that is listening for connections on port 8000.  This application resides in `/usr/share/hubspot/NocSkillsWeb`, and has a startup script at `/etc/init.d/NocSkillsWeb`.
+    - There will be a Java application that is listening for connections on port 24080.  This application resides in `/usr/share/hubspot/NocSkillsAPI`, and has a startup script at `/etc/init.d/NocSkillsAPI`.
     - There will be an instance of MongoDB that is listening for connections on port 27017.
-    - A connection to http://<instance public ip>:8000/ will return a webpage.
+    - A connection to http://\<instance public ip\>:8000/ will return a webpage.
 5. Verify that all applications are running, and are listening on the appropriate ports.  If any of them are not:
     - Create a GitHub issue __in your own fork of this repository__ that describes the issue.  Your description should be detailed enough that someone else reading the issue could immediately tell what you had found, without needing to do their own investigation.
     - Fix the application on the machine.
