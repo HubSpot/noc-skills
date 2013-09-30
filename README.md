@@ -13,6 +13,7 @@ This is a position that is designed with the idea that you'll grow out of it, an
 Skills Evaluation
 =================
 This skills evaluation is designed to give us a sense of a couple of things:
+
 1. Your familiarity and comfort with Amazon Web Services (which we use extensively), with Git, and with the Linux command line
 2. Your understanding of how different layers of a web service interact
 3. Your ability to diagnose problems with code with which you are unfamiliar
